@@ -29,9 +29,9 @@ from markdown_it import MarkdownIt
 from requests.exceptions import RequestException
 from sqlmodel import Session, select
 
-from core.database import engine
-from models import Answer, LLMProvider, Prompt, Submission, Summary
-from services.llm_client import (
+from oceens.core.database import engine
+from oceens.models import Answer, LLMProvider, Prompt, Submission, Summary
+from oceens.services.llm_client import (
     LLMConfigError,
     ask_model,
     build_cache_session,

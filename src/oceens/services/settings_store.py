@@ -14,7 +14,7 @@ passées ne doit pas changer rétroactivement.
 
 import logging
 
-from models import Setting
+from oceens.models import Setting
 
 logger = logging.getLogger("uvicorn.error")
 

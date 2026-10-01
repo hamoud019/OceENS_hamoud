@@ -15,11 +15,11 @@ est comptée comme non chiffrable, jamais estimée.
 from fastapi import APIRouter, Request
 from fastapi.responses import HTMLResponse, JSONResponse, RedirectResponse
 
-from core.database import SessionDep
-from core.dependencies import templates
-from models import Survey
-from routers.llm._access import current_roles, is_admin
-from services.llm_costs import format_cost, global_cost, survey_cost
+from oceens.core.database import SessionDep
+from oceens.core.dependencies import templates
+from oceens.models import Survey
+from oceens.routers.llm._access import current_roles, is_admin
+from oceens.services.llm_costs import format_cost, global_cost, survey_cost
 
 backend_router = APIRouter(tags=["Backend"], prefix="/backend")
 api_router = APIRouter(tags=["API"], prefix="/api")

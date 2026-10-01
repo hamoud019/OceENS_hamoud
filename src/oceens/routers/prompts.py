@@ -4,10 +4,10 @@ from typing import Optional
 from fastapi import APIRouter, Form, Request
 from fastapi.responses import HTMLResponse, JSONResponse, RedirectResponse
 from sqlmodel import delete, func, select
-from core.auth import get_current_user
-from core.database import SessionDep
-from models import LLMProvider, Prompt, Role, Summary, Survey, User
-from core.dependencies import templates
+from oceens.core.auth import get_current_user
+from oceens.core.database import SessionDep
+from oceens.models import LLMProvider, Prompt, Role, Summary, Survey, User
+from oceens.core.dependencies import templates
 
 # Deux routeurs : /api pour les mutations (form/fetch), /backend pour les pages
 api_router = APIRouter(tags=["API"], prefix="/api")

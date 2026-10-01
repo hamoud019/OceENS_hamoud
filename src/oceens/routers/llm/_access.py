@@ -8,8 +8,8 @@ modifier, et pas d'écran oublié.
 
 from sqlmodel import func, select
 
-from core.auth import get_current_user
-from models import Role, User
+from oceens.core.auth import get_current_user
+from oceens.models import Role, User
 
 
 def current_roles(request, session):

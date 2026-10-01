@@ -4,9 +4,9 @@ from typing import Optional
 from fastapi import APIRouter, Form, Request
 from fastapi.responses import JSONResponse
 from sqlmodel import delete, func, select
-from core.auth import get_current_user
-from core.database import SessionDep
-from models import Answer, Question, Role, Section, Template, User
+from oceens.core.auth import get_current_user
+from oceens.core.database import SessionDep
+from oceens.models import Answer, Question, Role, Section, Template, User
 
 router = APIRouter(tags=["API"], prefix="/api")
 

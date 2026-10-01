@@ -24,12 +24,12 @@ from fastapi.staticfiles import StaticFiles
 from starlette.middleware.sessions import SessionMiddleware
 import uvicorn
 
-from core.auth import AUTH_MODE, SECRET_KEY, router as auth_router
-from core.database import create_db_and_tables
-from core.dependencies import logger
-from core.seed import seed_all_if_necessary
+from oceens.core.auth import AUTH_MODE, SECRET_KEY, router as auth_router
+from oceens.core.database import create_db_and_tables
+from oceens.core.dependencies import logger
+from oceens.core.seed import seed_all_if_necessary
 
-from routers import (
+from oceens.routers import (
     pages,
     prompts,
     sections_questions,
@@ -39,9 +39,9 @@ from routers import (
     surveys,
     users,
 )
-from routers.llm import costs as llm_costs
-from routers.llm import prices as llm_prices
-from routers.llm import providers as llm_providers
+from oceens.routers.llm import costs as llm_costs
+from oceens.routers.llm import prices as llm_prices
+from oceens.routers.llm import providers as llm_providers
 
 load_dotenv()
 

@@ -16,7 +16,7 @@ from sqlalchemy import text
 from sqlmodel import SQLModel, create_engine, Session, select
 
 # User est défini dans models/ et hérite de SQLModel
-from models import User
+from oceens.models import User
 
 logger = logging.getLogger("uvicorn.error")
 

@@ -14,25 +14,25 @@ clés étrangères SQLAlchemy sont déclarées par nom de table (chaîne), pas p
 référence de classe, donc il n'y a pas de risque d'import circulaire ici.
 """
 
-from models.Answer import Answer
-from models.LLMModelPrice import LLMModelPrice
-from models.LLMProvider import LLMProvider
-from models.Module import Module
-from models.Option import Option
-from models.Program import Program
-from models.Prompt import Prompt
-from models.Question import Question
-from models.Respondent import Respondent
-from models.Role import Role
-from models.Section import Section
-from models.Setting import Setting
-from models.Stat import Stat
-from models.StatValue import StatValue
-from models.Submission import Submission
-from models.Summary import Summary
-from models.Survey import Survey
-from models.Template import Template
-from models.User import User
+from oceens.models.Answer import Answer
+from oceens.models.LLMModelPrice import LLMModelPrice
+from oceens.models.LLMProvider import LLMProvider
+from oceens.models.Module import Module
+from oceens.models.Option import Option
+from oceens.models.Program import Program
+from oceens.models.Prompt import Prompt
+from oceens.models.Question import Question
+from oceens.models.Respondent import Respondent
+from oceens.models.Role import Role
+from oceens.models.Section import Section
+from oceens.models.Setting import Setting
+from oceens.models.Stat import Stat
+from oceens.models.StatValue import StatValue
+from oceens.models.Submission import Submission
+from oceens.models.Summary import Summary
+from oceens.models.Survey import Survey
+from oceens.models.Template import Template
+from oceens.models.User import User
 
 __all__ = [
     "Answer",

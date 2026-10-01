@@ -12,8 +12,8 @@ import logging
 
 from sqlmodel import Session, func, select
 
-from core.database import engine
-from models import (
+from oceens.core.database import engine
+from oceens.models import (
     Answer,
     Module,
     Option,

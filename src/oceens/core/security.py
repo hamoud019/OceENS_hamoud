@@ -8,10 +8,10 @@ from typing import List
 from fastapi import FastAPI, Request
 from fastapi.responses import RedirectResponse
 from sqlmodel import Session, func, select
-from core.auth import get_current_user
-from core.database import SessionDep
-from models import Program, Respondent, Role, Survey, User
-from core.dependencies import logger
+from oceens.core.auth import get_current_user
+from oceens.core.database import SessionDep
+from oceens.models import Program, Respondent, Role, Survey, User
+from oceens.core.dependencies import logger
 
 
 # Ensemble des rôles valides reconnus par l'application

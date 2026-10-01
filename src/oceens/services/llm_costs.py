@@ -29,7 +29,7 @@ import logging
 
 from sqlmodel import select
 
-from models import LLMModelPrice, Prompt, Summary, Survey
+from oceens.models import LLMModelPrice, Prompt, Summary, Survey
 
 logger = logging.getLogger("uvicorn.error")
 

@@ -7,9 +7,9 @@ from fastapi import APIRouter, Request
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel
 from sqlmodel import Session, delete, func, select
-from core.database import SessionDep
-from models import Program, Respondent, Role, Survey, User
-from core.security import check_role, parse_role_scopes, require_roles, VALID_ROLES
+from oceens.core.database import SessionDep
+from oceens.models import Program, Respondent, Role, Survey, User
+from oceens.core.security import check_role, parse_role_scopes, require_roles, VALID_ROLES
 from typing import List
 
 router = APIRouter(tags=["API"], prefix="/api")

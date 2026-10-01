@@ -11,9 +11,9 @@ Usage : python survey_loader_from_xlsx.py SYLLABUS FORMS PROGRAM SEMESTER YEAR
 import pandas as pd
 import sys
 import re
-from core.database import engine
+from oceens.core.database import engine
 from sqlmodel import Session, select, func
-from models import  Survey, Submission, Answer, Option,Module,Program
+from oceens.models import  Survey, Submission, Answer, Option,Module,Program
 
 def process_section(session,df,column_name, initial_question_id, module_id=None, teacher=None, rowsMask=None):
     """Importe un bloc de questions à partir d'une colonne de départ du fichier.

@@ -6,15 +6,15 @@ from fastapi import APIRouter, Form, Request
 from fastapi.responses import HTMLResponse, JSONResponse, RedirectResponse
 from pydantic import BaseModel
 from sqlmodel import Session, delete, func, select
-from core.auth import get_current_user
-from core.database import SessionDep
-from models import Answer, Module, Option, Program, Question, Respondent, Section, Submission, Survey, User
-from core.dependencies import logger, templates
-from core.security import _check_sondage_access_and_status, can_manage_survey, get_results_program_codes, parse_rprm_formations, require_roles
-from services.helpers import delete_survey_with_relations
-from sondage_loader import load_sondage_complet
-from services.export_csv import generate_csv_response
-from services.visualisation_data import bilingual_text, get_visualisation_context2
+from oceens.core.auth import get_current_user
+from oceens.core.database import SessionDep
+from oceens.models import Answer, Module, Option, Program, Question, Respondent, Section, Submission, Survey, User
+from oceens.core.dependencies import logger, templates
+from oceens.core.security import _check_sondage_access_and_status, can_manage_survey, get_results_program_codes, parse_rprm_formations, require_roles
+from oceens.services.helpers import delete_survey_with_relations
+from oceens.sondage_loader import load_sondage_complet
+from oceens.services.export_csv import generate_csv_response
+from oceens.services.visualisation_data import bilingual_text, get_visualisation_context2
 
 router = APIRouter(tags=["API"], prefix="/api")
 

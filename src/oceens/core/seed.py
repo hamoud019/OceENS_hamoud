@@ -14,7 +14,7 @@ import logging
 
 import csv
 import json
-from models import (
+from oceens.models import (
     Program,
     User,
     Role,
@@ -33,8 +33,8 @@ from models import (
     Setting,
     Stat,
 )
-from core.database import engine
-from services.settings_store import (
+from oceens.core.database import engine
+from oceens.services.settings_store import (
     DEFAULT_USD_TO_EUR,
     USD_TO_EUR_KEY,
     get_usd_to_eur,

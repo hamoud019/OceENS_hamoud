@@ -9,6 +9,6 @@ regroupement range le code, il ne déplace pas les pages. Les liens, signets et
 redirections existants continuent donc de fonctionner.
 """
 
-from routers.llm import costs, prices, providers
+from oceens.routers.llm import costs, prices, providers
 
 __all__ = ["costs", "prices", "providers"]

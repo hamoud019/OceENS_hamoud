@@ -23,12 +23,12 @@ from fastapi import APIRouter, Form, Request
 from fastapi.responses import HTMLResponse, RedirectResponse
 from sqlmodel import select
 
-from core.database import SessionDep
-from core.dependencies import templates
-from models import LLMModelPrice, LLMProvider
-from routers.llm._access import is_admin
-from services.llm_costs import format_amount, format_cost
-from services.settings_store import USD_TO_EUR_KEY, get_usd_to_eur, set_setting
+from oceens.core.database import SessionDep
+from oceens.core.dependencies import templates
+from oceens.models import LLMModelPrice, LLMProvider
+from oceens.routers.llm._access import is_admin
+from oceens.services.llm_costs import format_amount, format_cost
+from oceens.services.settings_store import USD_TO_EUR_KEY, get_usd_to_eur, set_setting
 
 backend_router = APIRouter(tags=["Backend"], prefix="/backend")
 

@@ -5,11 +5,11 @@ from fastapi import APIRouter, Form, Request
 from fastapi.responses import HTMLResponse, JSONResponse, RedirectResponse
 from requests.exceptions import RequestException
 from sqlmodel import func, select
-from core.auth import get_current_user
-from core.database import SessionDep
-from models import LLMProvider, Prompt, Role, User
-from core.dependencies import logger, templates
-from services.llm_client import (
+from oceens.core.auth import get_current_user
+from oceens.core.database import SessionDep
+from oceens.models import LLMProvider, Prompt, Role, User
+from oceens.core.dependencies import logger, templates
+from oceens.services.llm_client import (
     ERROR_AUTH,
     ERROR_QUOTA,
     LLMConfigError,
