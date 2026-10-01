@@ -9,5 +9,6 @@ services:
       - .env
     volumes:
       - ${LOCAL_DATABASE_DIR:-./database}:/app/database
-      - ./import:/app/import
+      # Le paquet est installé dans .venv : import/ y est lu (core/seed.py)
+      - ./src/oceens/import:/app/.venv/lib/python3.12/site-packages/oceens/import
     restart: always

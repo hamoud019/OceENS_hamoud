@@ -63,7 +63,7 @@ def _maybe_start_summaries_daemon():
 
     logger.info("Démarrage du daemon de synthèses (RUN_SUMMARIES_DAEMON activé)...")
     # sys.executable = le même interpréteur Python que celui d'uvicorn
-    return subprocess.Popen([sys.executable, "summaries_generator_daemon.py"])
+    return subprocess.Popen([sys.executable, "-m", "oceens.summaries_generator_daemon"])
 
 
 @asynccontextmanager
@@ -156,7 +156,7 @@ app = create_app()
 
 if __name__ == "__main__":
     uvicorn.run(
-        "main:app",
+        "oceens.main:app",
         host="0.0.0.0",
         port=8000,
     )
