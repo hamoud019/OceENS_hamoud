@@ -6,11 +6,13 @@ modules possible.
 """
 
 import logging
+from pathlib import Path
 
 from fastapi.templating import Jinja2Templates
 
 # Moteur de templates Jinja2 partagé par toutes les routes qui rendent du HTML
-templates = Jinja2Templates(directory="templates")
+# Résolu depuis le paquet, pas depuis le dossier courant
+templates = Jinja2Templates(directory=Path(__file__).resolve().parent.parent / "templates")
 # Ne pas trier les clés JSON (préserver l'ordre voulu dans les templates)
 templates.env.policies["json.dumps_kwargs"] = {"sort_keys": False}
 

@@ -14,6 +14,7 @@ les modules dédiés :
 
 from contextlib import asynccontextmanager
 import os
+from pathlib import Path
 import sys
 import subprocess
 
@@ -126,7 +127,7 @@ def create_app():
     app.include_router(auth_router)
 
     # Fichiers statiques (les templates Jinja sont montés dans dependencies.py)
-    app.mount("/static", StaticFiles(directory="static"), name="static")
+    app.mount("/static", StaticFiles(directory=Path(__file__).resolve().parent / "static"), name="static")
 
     # ┌─ Assemblage des routeurs ──────────────────────────────────────────┐
     # L'ordre reproduit celui de l'ancien app.py : api, puis dashboard,

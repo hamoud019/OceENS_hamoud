@@ -43,6 +43,9 @@ from oceens.services.settings_store import (
 
 logger = logging.getLogger("uvicorn")
 
+# Données de départ, livrées avec le paquet (src/oceens/import/)
+IMPORT_DIR = Path(__file__).resolve().parent.parent / "import"
+
 
 
 ADDITIONAL_STUDENT_USERS = [
@@ -591,7 +594,7 @@ def seed_programs(session: Session):
     # Clean table first
     session.exec(delete(Program))
 
-    csv_path = Path("import/Program_list.csv")
+    csv_path = IMPORT_DIR / "Program_list.csv"
 
     if not csv_path.exists():
         logger.warning("[SEED] import/Program_list.csv introuvable.")
@@ -945,7 +948,7 @@ def seed_answers(session: Session):
     """Remplit la table answers."""
 
     for survey_data in SEEDED_SURVEYS:
-        csv_path = Path("import") / survey_data["answers_file"]
+        csv_path = IMPORT_DIR / survey_data["answers_file"]
 
         if not csv_path.exists():
             logger.warning(f"[SEED] {csv_path} introuvable.")

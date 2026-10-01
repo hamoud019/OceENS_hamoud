@@ -21,8 +21,11 @@ from oceens.models import User
 logger = logging.getLogger("uvicorn.error")
 
 # Emplacement du fichier de base : configurable via la variable d'environnement
-# LOCAL_DATABASE_DIR, sinon dossier database/ à la racine du projet (ignoré par Git)
-PROJECT_ROOT = Path(__file__).resolve().parent.parent
+# LOCAL_DATABASE_DIR, sinon dossier database/ à la racine du dépôt (ignoré par Git).
+# Ce fichier est dans src/oceens/core/ : la racine du dépôt est trois niveaux
+# au-dessus. Dans le conteneur, le paquet est installé ailleurs : le Dockerfile
+# fixe donc LOCAL_DATABASE_DIR.
+PROJECT_ROOT = Path(__file__).resolve().parents[3]
 DEFAULT_DATABASE_DIR = PROJECT_ROOT / "database"
 RAW_DATABASE_PATH = os.getenv("LOCAL_DATABASE_DIR")
 
