@@ -9,6 +9,7 @@ Cet objet sait ensuite s'aplatir en lignes de tableau (une par réponse) via
 from dataclasses import dataclass, field
 from typing import Any, Dict, List, Optional
 
+from oceens.core.auth import _build_msal_app  # noqa: F401
 from sqlmodel import Session, select
 
 from oceens.core.database import engine
