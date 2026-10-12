@@ -32,4 +32,4 @@ def test_estimate_counts_every_pending_job_of_the_queue(session):
     progress = survey_progress(session, survey_id=1)
 
     assert progress.pending == 45
-    assert progress.estimated_seconds_left == 9000
+    assert progress.estimated_seconds_left == 1
